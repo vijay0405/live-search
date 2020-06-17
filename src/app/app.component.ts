@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 
+import { liveSearch } from './app.operator';
 import { BlogService } from './app.service';
 
 @Component({
@@ -13,9 +13,7 @@ export class AppComponent {
   private userIdSubject = new Subject<string>();
 
   readonly blogPosts$ = this.userIdSubject.pipe(
-    debounceTime(250),
-    distinctUntilChanged(),
-    switchMap(userId => this.blogService.fetchPosts(userId))
+    liveSearch(userId => this.blogService.fetchPosts(userId))
   );
 
   constructor(private blogService: BlogService) { }
