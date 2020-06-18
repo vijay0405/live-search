@@ -1,4 +1,7 @@
 # Live - Search 
+
+![]('liveSearch.gif')
+
 live-search using  Angular/RxJS and node backend 
 
 user can type a query into an input element,
@@ -10,3 +13,5 @@ an http request is made only for a so-called stable query (the required time has
 an http request should not be performed if a stable query has not changed,
 
 a race condition has to be handled so that stale results are not rendered.
+
+
