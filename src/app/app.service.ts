@@ -9,7 +9,7 @@ import { BlogPost } from './app.model';
   providedIn: 'root'
 })
 export class BlogService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:3001';
 
   constructor(private http: HttpClient) { }
 
