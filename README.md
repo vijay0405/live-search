@@ -1,6 +1,6 @@
 # Live - Search 
 
-![]('liveSearch.gif')
+![](liveSearch.gif)
 
 live-search using  Angular/RxJS and node backend 
 
